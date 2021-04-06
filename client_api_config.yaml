@@ -1,0 +1,43 @@
+# disallowAdditionalPropertiesIfNotPresent
+#
+# If false, the 'additionalProperties' implementation (set to true by default) is compliant with the OAS and JSON schema specifications. 
+# If true (default), keep the old (incorrect) behaviour that 'additionalProperties' is set to false by default. (Default: true)
+#     false - The 'additionalProperties' implementation is compliant with the OAS and JSON schema specifications.
+#     true - Keep the old (incorrect) behaviour that 'additionalProperties' is set to false by default.
+
+# enumClassPrefix
+# Prefix enum with class name (Default: false)
+
+# generateInterfaces
+# Generate interfaces for api classes (Default: false)
+
+# hideGenerationTimestamp
+# Hides the generation timestamp when files are generated. (Default: true)
+
+# isGoSubmodule
+# whether the generated Go module is a submodule (Default: false)
+
+# packageName
+# Go package name (convention: lowercase). (Default: openapi)
+
+# packageVersion
+# Go package version. (Default: 1.0.0)
+
+# prependFormOrBodyParameters
+# Add form or body parameters to the beginning of the parameter list. (Default: false)
+
+# structPrefix
+# whether to prefix struct with the class name. e.g. DeletePetOpts => PetApiDeletePetOpts (Default: false)
+
+# useOneOfDiscriminatorLookup
+# Use the discriminator's mapping in oneOf to speed up the model lookup. IMPORTANT: Validation (e.g. one and only one match in oneOf's schemas) will be skipped. (Default: false)
+
+# withAWSV4Signature
+# whether to include AWS v4 signature support (Default: false)
+
+# withXml
+# whether to include support for application/xml content type and include XML annotations in the model (works with libraries that provide support for JSON and XML) (Default: false)
+
+generateInterfaces: true
+structPrefix: true
+packageName: bitbucket_client
