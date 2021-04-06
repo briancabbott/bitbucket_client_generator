@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Repository** | Pointer to [**SubjectTypesRepository**](SubjectTypesRepository.md) |  | [optional] 
 **User** | Pointer to [**SubjectTypesRepository**](SubjectTypesRepository.md) |  | [optional] 
-**Team** | Pointer to [**SubjectTypesTeam**](SubjectTypesTeam.md) |  | [optional] 
+**Team** | Pointer to [**SubjectTypesRepository**](SubjectTypesRepository.md) |  | [optional] 
 
 ## Methods
 
@@ -79,20 +79,20 @@ HasUser returns a boolean if a field has been set.
 
 ### GetTeam
 
-`func (o *SubjectTypes) GetTeam() SubjectTypesTeam`
+`func (o *SubjectTypes) GetTeam() SubjectTypesRepository`
 
 GetTeam returns the Team field if non-nil, zero value otherwise.
 
 ### GetTeamOk
 
-`func (o *SubjectTypes) GetTeamOk() (*SubjectTypesTeam, bool)`
+`func (o *SubjectTypes) GetTeamOk() (*SubjectTypesRepository, bool)`
 
 GetTeamOk returns a tuple with the Team field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetTeam
 
-`func (o *SubjectTypes) SetTeam(v SubjectTypesTeam)`
+`func (o *SubjectTypes) SetTeam(v SubjectTypesRepository)`
 
 SetTeam sets Team field to given value.
 

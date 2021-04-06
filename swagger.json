@@ -441,9 +441,6 @@
                             "title": "Link",
                             "description": "A link to a resource related to this object.",
                             "properties": {
-                                "type": {
-                                    "type": "string"
-                                },
                                 "href": {
                                     "type": "string",
                                     "format": "uri"
@@ -1828,7 +1825,11 @@
                     "type": "object",
                     "title": "Team",
                     "description": "A team object.",
-                    "properties": {},
+                    "properties": {
+                        "type": {
+                            "type": "string"
+                        }    
+                    },
                     "additionalProperties": true
                 }
             ]

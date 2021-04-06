@@ -15,18 +15,17 @@ import (
 	"encoding/json"
 )
 
-// Team struct for Team
+// Team A team object.
 type Team struct {
-	Account
+	Type *string `json:"type,omitempty"`
 }
 
 // NewTeam instantiates a new Team object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewTeam(type_ string) *Team {
+func NewTeam() *Team {
 	this := Team{}
-	this.Type = type_
 	return &this
 }
 
@@ -38,15 +37,42 @@ func NewTeamWithDefaults() *Team {
 	return &this
 }
 
+// GetType returns the Type field value if set, zero value otherwise.
+func (o *Team) GetType() string {
+	if o == nil || o.Type == nil {
+		var ret string
+		return ret
+	}
+	return *o.Type
+}
+
+// GetTypeOk returns a tuple with the Type field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *Team) GetTypeOk() (*string, bool) {
+	if o == nil || o.Type == nil {
+		return nil, false
+	}
+	return o.Type, true
+}
+
+// HasType returns a boolean if a field has been set.
+func (o *Team) HasType() bool {
+	if o != nil && o.Type != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetType gets a reference to the given string and assigns it to the Type field.
+func (o *Team) SetType(v string) {
+	o.Type = &v
+}
+
 func (o Team) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
-	serializedAccount, errAccount := json.Marshal(o.Account)
-	if errAccount != nil {
-		return []byte{}, errAccount
-	}
-	errAccount = json.Unmarshal([]byte(serializedAccount), &toSerialize)
-	if errAccount != nil {
-		return []byte{}, errAccount
+	if o.Type != nil {
+		toSerialize["type"] = o.Type
 	}
 	return json.Marshal(toSerialize)
 }

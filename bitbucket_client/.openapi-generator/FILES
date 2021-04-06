@@ -100,7 +100,6 @@ docs/IssueTrackerApi.md
 docs/JiraProject.md
 docs/JiraSite.md
 docs/Link.md
-docs/Link1.md
 docs/Milestone.md
 docs/ModelError.md
 docs/Object.md
@@ -263,7 +262,6 @@ docs/SshKey.md
 docs/StgWestReport.md
 docs/SubjectTypes.md
 docs/SubjectTypesRepository.md
-docs/SubjectTypesTeam.md
 docs/Tag.md
 docs/Team.md
 docs/TeamPermission.md
@@ -346,7 +344,6 @@ model_issue_links.go
 model_jira_project.go
 model_jira_site.go
 model_link.go
-model_link_1.go
 model_milestone.go
 model_object.go
 model_paginated_annotations.go
@@ -497,7 +494,6 @@ model_ssh_key.go
 model_stg_west_report.go
 model_subject_types.go
 model_subject_types_repository.go
-model_subject_types_team.go
 model_tag.go
 model_team.go
 model_team_permission.go
