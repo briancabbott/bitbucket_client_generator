@@ -41,3 +41,4 @@
 generateInterfaces: true
 structPrefix: true
 packageName: bitbucket_client
+packageVersion: 0.1.0
