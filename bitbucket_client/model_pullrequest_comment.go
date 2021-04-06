@@ -18,6 +18,7 @@ import (
 // PullrequestComment struct for PullrequestComment
 type PullrequestComment struct {
 	Comment
+	Type string `json:"type"`
 	Pullrequest *Pullrequest `json:"pullrequest,omitempty"`
 }
 
@@ -37,6 +38,30 @@ func NewPullrequestComment(type_ string) *PullrequestComment {
 func NewPullrequestCommentWithDefaults() *PullrequestComment {
 	this := PullrequestComment{}
 	return &this
+}
+
+// GetType returns the Type field value
+func (o *PullrequestComment) GetType() string {
+	if o == nil {
+		var ret string
+		return ret
+	}
+
+	return o.Type
+}
+
+// GetTypeOk returns a tuple with the Type field value
+// and a boolean to check if the value has been set.
+func (o *PullrequestComment) GetTypeOk() (*string, bool) {
+	if o == nil  {
+		return nil, false
+	}
+	return &o.Type, true
+}
+
+// SetType sets field value
+func (o *PullrequestComment) SetType(v string) {
+	o.Type = v
 }
 
 // GetPullrequest returns the Pullrequest field value if set, zero value otherwise.
@@ -80,6 +105,9 @@ func (o PullrequestComment) MarshalJSON() ([]byte, error) {
 	errComment = json.Unmarshal([]byte(serializedComment), &toSerialize)
 	if errComment != nil {
 		return []byte{}, errComment
+	}
+	if true {
+		toSerialize["type"] = o.Type
 	}
 	if o.Pullrequest != nil {
 		toSerialize["pullrequest"] = o.Pullrequest

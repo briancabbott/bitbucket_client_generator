@@ -441,6 +441,9 @@
                             "title": "Link",
                             "description": "A link to a resource related to this object.",
                             "properties": {
+                                "type": {
+                                    "type": "string"
+                                },
                                 "href": {
                                     "type": "string",
                                     "format": "uri"
@@ -5662,6 +5665,9 @@
                     "title": "Pull Request Comment",
                     "description": "A pullrequest comment.",
                     "properties": {
+                        "type": {
+                            "type": "string"
+                        },
                         "pullrequest": {
                             "$ref": "#/definitions/pullrequest"
                         }

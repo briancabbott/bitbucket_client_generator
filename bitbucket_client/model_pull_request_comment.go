@@ -17,6 +17,7 @@ import (
 
 // PullRequestComment A pullrequest comment.
 type PullRequestComment struct {
+	Type *string `json:"type,omitempty"`
 	Pullrequest *Pullrequest `json:"pullrequest,omitempty"`
 }
 
@@ -35,6 +36,38 @@ func NewPullRequestComment() *PullRequestComment {
 func NewPullRequestCommentWithDefaults() *PullRequestComment {
 	this := PullRequestComment{}
 	return &this
+}
+
+// GetType returns the Type field value if set, zero value otherwise.
+func (o *PullRequestComment) GetType() string {
+	if o == nil || o.Type == nil {
+		var ret string
+		return ret
+	}
+	return *o.Type
+}
+
+// GetTypeOk returns a tuple with the Type field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *PullRequestComment) GetTypeOk() (*string, bool) {
+	if o == nil || o.Type == nil {
+		return nil, false
+	}
+	return o.Type, true
+}
+
+// HasType returns a boolean if a field has been set.
+func (o *PullRequestComment) HasType() bool {
+	if o != nil && o.Type != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetType gets a reference to the given string and assigns it to the Type field.
+func (o *PullRequestComment) SetType(v string) {
+	o.Type = &v
 }
 
 // GetPullrequest returns the Pullrequest field value if set, zero value otherwise.
@@ -71,6 +104,9 @@ func (o *PullRequestComment) SetPullrequest(v Pullrequest) {
 
 func (o PullRequestComment) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
+	if o.Type != nil {
+		toSerialize["type"] = o.Type
+	}
 	if o.Pullrequest != nil {
 		toSerialize["pullrequest"] = o.Pullrequest
 	}

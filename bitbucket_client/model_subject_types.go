@@ -19,7 +19,7 @@ import (
 type SubjectTypes struct {
 	Repository *SubjectTypesRepository `json:"repository,omitempty"`
 	User *SubjectTypesRepository `json:"user,omitempty"`
-	Team *SubjectTypesRepository `json:"team,omitempty"`
+	Team *SubjectTypesTeam `json:"team,omitempty"`
 }
 
 // NewSubjectTypes instantiates a new SubjectTypes object
@@ -104,9 +104,9 @@ func (o *SubjectTypes) SetUser(v SubjectTypesRepository) {
 }
 
 // GetTeam returns the Team field value if set, zero value otherwise.
-func (o *SubjectTypes) GetTeam() SubjectTypesRepository {
+func (o *SubjectTypes) GetTeam() SubjectTypesTeam {
 	if o == nil || o.Team == nil {
-		var ret SubjectTypesRepository
+		var ret SubjectTypesTeam
 		return ret
 	}
 	return *o.Team
@@ -114,7 +114,7 @@ func (o *SubjectTypes) GetTeam() SubjectTypesRepository {
 
 // GetTeamOk returns a tuple with the Team field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *SubjectTypes) GetTeamOk() (*SubjectTypesRepository, bool) {
+func (o *SubjectTypes) GetTeamOk() (*SubjectTypesTeam, bool) {
 	if o == nil || o.Team == nil {
 		return nil, false
 	}
@@ -130,8 +130,8 @@ func (o *SubjectTypes) HasTeam() bool {
 	return false
 }
 
-// SetTeam gets a reference to the given SubjectTypesRepository and assigns it to the Team field.
-func (o *SubjectTypes) SetTeam(v SubjectTypesRepository) {
+// SetTeam gets a reference to the given SubjectTypesTeam and assigns it to the Team field.
+func (o *SubjectTypes) SetTeam(v SubjectTypesTeam) {
 	o.Team = &v
 }
 
